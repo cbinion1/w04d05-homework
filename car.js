@@ -4,32 +4,26 @@ console.log("Linked");
 
 class car  {
 	constructor (color, convertible, speed) {
-		this.color = color;
-		this.convertible = convertible;
-		this.speed = speed;
+		this.color = "Corso Rosica";
+		this.convertible = false;
+		this.speed = 0;
 	}
-	accelerate() {
-		if (this.speed >= 0)
-		return this.speed++;
-	console.log("I cant drive, 55");
+	accelerate(goFaster) {
+		let oldSpeed = this.speed;
+		this.speed += goFaster;
+	console.log("I cant drive, 55" ${oldSpeed} to ${this.speed});
 	}
-	brake() {
-		if (this.speed > 0)
-		return this.speed--;
-	console.log("Is that a cop?");
+	brake(slowDown) {
+		let oldSpeed = this.speed;
+		this.speed -= slowDown;
+	console.log("Is that a cop?" ${oldSpeed} to ${this.speed});
 	}
 }
 
-const ferrari = new car("Rosso Corsica", true, 0);
 
-module.exports.ferrari.accelerate(){
-	console.log(this.speed);
-}
-
-module.exports.ferrari.brake(){
-	console.log(this.speed);
-}
-
+car.accelerate(25);
+car.accelerate(75);
+car.brake(55);
 
 
 
